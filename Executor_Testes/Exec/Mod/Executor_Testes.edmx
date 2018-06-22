@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AutomacaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ordem_Execucao_Automacao">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ordem" Type="int" Nullable="false" />
+          <Property Name="Tabela" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Funcionalidade" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Nome_Teste" Type="varchar" MaxLength="100" />
+          <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TreeViewExecucaoAutomacao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_Teste" Type="int" Nullable="false" />
+          <Property Name="Tabela" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TestCaseID" Type="int" Nullable="false" />
+          <Property Name="Descricao_CasoTeste" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Executar" Type="bit" Nullable="false" />
+          <Property Name="Nome_Teste" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Funcionalidade" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OrdemExecucao" Type="int" Nullable="false" />
+          <Property Name="ID_Suite" Type="int" Nullable="false" />
+          <Property Name="ID_Config" Type="int" Nullable="false" />
+          <Property Name="MassaDados" Type="bit" Nullable="false" />
+          <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+        </EntityType>
+        <Function Name="sp_RetornaTreeViewAutomacao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoIkcadm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoLogistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoManager" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoMobile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoOther1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoOther2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoOther3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoOther4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoOther5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaTreeViewAutomacaoPay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="AutomacaoModelStoreContainer">
+          <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutomacaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ordem_Execucao_Automacao">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ordem" Type="Int32" Nullable="false" />
+          <Property Name="Tabela" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Funcionalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nome_Teste" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TreeViewExecucaoAutomacao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Teste" Type="Int32" Nullable="false" />
+          <Property Name="Tabela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TestCaseID" Type="Int32" Nullable="false" />
+          <Property Name="Descricao_CasoTeste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Executar" Type="Boolean" Nullable="false" />
+          <Property Name="Nome_Teste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Funcionalidade" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrdemExecucao" Type="Int32" Nullable="false" />
+          <Property Name="ID_Suite" Type="Int32" Nullable="false" />
+          <Property Name="ID_Config" Type="Int32" Nullable="false" />
+          <Property Name="MassaDados" Type="Boolean" Nullable="false" />
+          <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Qualidade" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" />
+          <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacao" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoAccount" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoIkcadm" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoLogistics" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoManager" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoMobile" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoOther1" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoOther2" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoOther3" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoOther4" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoOther5" />
+          <FunctionImport Name="sp_RetornaTreeViewAutomacaoPay" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AutomacaoModelStoreContainer" CdmEntityContainer="Qualidade">
+          <EntitySetMapping Name="Ordem_Execucao_Automacao">
+            <EntityTypeMapping TypeName="AutomacaoModel.Ordem_Execucao_Automacao">
+              <MappingFragment StoreEntitySet="Ordem_Execucao_Automacao">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+                <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+                <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+                <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+                <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreeViewExecucaoAutomacao">
+            <EntityTypeMapping TypeName="AutomacaoModel.TreeViewExecucaoAutomacao">
+              <MappingFragment StoreEntitySet="TreeViewExecucaoAutomacao">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Teste" ColumnName="ID_Teste" />
+                <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+                <ScalarProperty Name="TestCaseID" ColumnName="TestCaseID" />
+                <ScalarProperty Name="Descricao_CasoTeste" ColumnName="Descricao_CasoTeste" />
+                <ScalarProperty Name="Executar" ColumnName="Executar" />
+                <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+                <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+                <ScalarProperty Name="OrdemExecucao" ColumnName="OrdemExecucao" />
+                <ScalarProperty Name="ID_Suite" ColumnName="ID_Suite" />
+                <ScalarProperty Name="ID_Config" ColumnName="ID_Config" />
+                <ScalarProperty Name="MassaDados" ColumnName="MassaDados" />
+                <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacao" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoAccount" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoAccount" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoIkcadm" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoIkcadm" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoLogistics" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoLogistics" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoManager" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoManager" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoMobile" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoMobile" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoOther1" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoOther1" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoOther2" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoOther2" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoOther3" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoOther3" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoOther4" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoOther4" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoOther5" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoOther5" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoPay" FunctionName="AutomacaoModel.Store.sp_RetornaTreeViewAutomacaoPay" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

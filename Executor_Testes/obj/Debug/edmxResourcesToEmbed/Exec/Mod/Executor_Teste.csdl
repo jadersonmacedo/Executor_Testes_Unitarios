@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Qualidade_Automacao" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ordem_Execucao_Automacao">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ordem" Type="Int32" Nullable="false" />
+    <Property Name="Tabela" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Funcionalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nome_Teste" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TreeViewExecucaoAutomacao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Teste" Type="Int32" Nullable="false" />
+    <Property Name="Tabela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TestCaseID" Type="Int32" Nullable="false" />
+    <Property Name="Descricao_CasoTeste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Executar" Type="Boolean" Nullable="false" />
+    <Property Name="Nome_Teste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Funcionalidade" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrdemExecucao" Type="Int32" Nullable="false" />
+    <Property Name="ID_Suite" Type="Int32" Nullable="false" />
+    <Property Name="ID_Config" Type="Int32" Nullable="false" />
+    <Property Name="MassaDados" Type="Boolean" Nullable="false" />
+    <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Qualidade" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" />
+    <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_000" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_001" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_002" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_003" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_004" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_005" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_006" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_007" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_008" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_009" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_010" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_011" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_012" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_013" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_014" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_015" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_016" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_017" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_018" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_019" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_020" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_021" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_022" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_023" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_024" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_025" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_026" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_027" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_028" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_029" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_030" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_031" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_032" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_033" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_034" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_035" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_036" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_037" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_038" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_039" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_040" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_041" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_042" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_043" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_044" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_045" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_046" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_047" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_048" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_049" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_BK_050" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao_EC_Dbcore" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacaoEC_Manager" />
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+</Schema>

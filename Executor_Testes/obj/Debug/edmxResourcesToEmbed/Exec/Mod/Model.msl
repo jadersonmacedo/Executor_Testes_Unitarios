@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Qualidade_Automacao_ModeloStoreContainer" CdmEntityContainer="Qualidade_Automacao">
+    <EntitySetMapping Name="Ordem_Execucao_Automacao">
+      <EntityTypeMapping TypeName="Qualidade_Automacao_Modelo.Ordem_Execucao_Automacao">
+        <MappingFragment StoreEntitySet="Ordem_Execucao_Automacao">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+          <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+          <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+          <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreeViewExecucaoAutomacao">
+      <EntityTypeMapping TypeName="Qualidade_Automacao_Modelo.TreeViewExecucaoAutomacao">
+        <MappingFragment StoreEntitySet="TreeViewExecucaoAutomacao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Teste" ColumnName="ID_Teste" />
+          <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+          <ScalarProperty Name="TestCaseID" ColumnName="TestCaseID" />
+          <ScalarProperty Name="Descricao_CasoTeste" ColumnName="Descricao_CasoTeste" />
+          <ScalarProperty Name="Executar" ColumnName="Executar" />
+          <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+          <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+          <ScalarProperty Name="OrdemExecucao" ColumnName="OrdemExecucao" />
+          <ScalarProperty Name="ID_Suite" ColumnName="ID_Suite" />
+          <ScalarProperty Name="ID_Config" ColumnName="ID_Config" />
+          <ScalarProperty Name="MassaDados" ColumnName="MassaDados" />
+          <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao" FunctionName="Qualidade_Automacao_Modelo.Store.sp_RetornaTreeViewAutomacao" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoEC_Manager" FunctionName="Qualidade_Automacao_Modelo.Store.sp_RetornaTreeViewAutomacaoEC_Manager" />
+  </EntityContainerMapping>
+</Mapping>

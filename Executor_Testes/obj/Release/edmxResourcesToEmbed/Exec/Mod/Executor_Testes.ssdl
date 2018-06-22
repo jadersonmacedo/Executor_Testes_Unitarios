@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomacaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ordem_Execucao_Automacao">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ordem" Type="int" Nullable="false" />
+    <Property Name="Tabela" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Funcionalidade" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nome_Teste" Type="varchar" MaxLength="100" />
+    <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TreeViewExecucaoAutomacao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Teste" Type="int" Nullable="false" />
+    <Property Name="Tabela" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TestCaseID" Type="int" Nullable="false" />
+    <Property Name="Descricao_CasoTeste" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Executar" Type="bit" Nullable="false" />
+    <Property Name="Nome_Teste" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Funcionalidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OrdemExecucao" Type="int" Nullable="false" />
+    <Property Name="ID_Suite" Type="int" Nullable="false" />
+    <Property Name="ID_Config" Type="int" Nullable="false" />
+    <Property Name="MassaDados" Type="bit" Nullable="false" />
+    <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+  </EntityType>
+  <Function Name="sp_RetornaTreeViewAutomacao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoIkcadm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoLogistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoManager" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoMobile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoOther1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoOther2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoOther3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoOther4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoOther5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoPay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="AutomacaoModelStoreContainer">
+    <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

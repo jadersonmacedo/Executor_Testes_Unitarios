@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Qualidade_AutomacaoStoreContainer" CdmEntityContainer="Qualidade">
+    <EntitySetMapping Name="Ordem_Execucao_Automacao">
+      <EntityTypeMapping TypeName="Qualidade_Automacao.Ordem_Execucao_Automacao">
+        <MappingFragment StoreEntitySet="Ordem_Execucao_Automacao">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+          <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+          <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+          <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreeViewExecucaoAutomacao">
+      <EntityTypeMapping TypeName="Qualidade_Automacao.TreeViewExecucaoAutomacao">
+        <MappingFragment StoreEntitySet="TreeViewExecucaoAutomacao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Teste" ColumnName="ID_Teste" />
+          <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+          <ScalarProperty Name="TestCaseID" ColumnName="TestCaseID" />
+          <ScalarProperty Name="Descricao_CasoTeste" ColumnName="Descricao_CasoTeste" />
+          <ScalarProperty Name="Executar" ColumnName="Executar" />
+          <ScalarProperty Name="Nome_Teste" ColumnName="Nome_Teste" />
+          <ScalarProperty Name="Funcionalidade" ColumnName="Funcionalidade" />
+          <ScalarProperty Name="OrdemExecucao" ColumnName="OrdemExecucao" />
+          <ScalarProperty Name="ID_Suite" ColumnName="ID_Suite" />
+          <ScalarProperty Name="ID_Config" ColumnName="ID_Config" />
+          <ScalarProperty Name="MassaDados" ColumnName="MassaDados" />
+          <ScalarProperty Name="Tabelas_Adicionais" ColumnName="Tabelas_Adicionais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_000" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_000" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_001" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_001" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_002" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_002" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_003" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_003" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_004" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_004" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_005" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_005" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_006" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_006" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_007" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_007" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_008" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_008" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_009" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_009" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_010" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_010" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_011" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_011" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_012" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_012" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_013" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_013" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_014" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_014" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_015" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_015" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_016" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_016" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_017" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_017" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_018" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_018" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_019" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_019" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_020" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_020" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_021" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_021" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_022" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_022" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_023" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_023" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_024" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_024" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_025" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_025" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_026" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_026" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_027" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_027" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_028" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_028" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_029" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_029" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_030" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_030" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_031" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_031" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_032" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_032" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_033" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_033" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_034" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_034" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_035" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_035" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_036" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_036" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_037" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_037" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_038" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_038" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_039" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_039" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_040" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_040" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_041" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_041" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_042" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_042" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_043" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_043" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_044" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_044" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_045" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_045" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_046" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_046" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_047" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_047" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_048" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_048" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_049" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_049" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_BK_050" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_BK_050" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacao_EC_Dbcore" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacao_EC_Dbcore" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaTreeViewAutomacaoEC_Manager" FunctionName="Qualidade_Automacao.Store.sp_RetornaTreeViewAutomacaoEC_Manager" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Qualidade_Automacao.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

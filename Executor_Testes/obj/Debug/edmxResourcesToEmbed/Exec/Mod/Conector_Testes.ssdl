@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Qualidade_AutomacaoModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ordem_Execucao_Automacao">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ordem" Type="int" Nullable="false" />
+    <Property Name="Tabela" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Funcionalidade" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nome_Teste" Type="varchar" MaxLength="100" />
+    <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TreeViewExecucaoAutomacao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Teste" Type="int" Nullable="false" />
+    <Property Name="Tabela" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TestCaseID" Type="int" Nullable="false" />
+    <Property Name="Descricao_CasoTeste" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Executar" Type="bit" Nullable="false" />
+    <Property Name="Nome_Teste" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Funcionalidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OrdemExecucao" Type="int" Nullable="false" />
+    <Property Name="ID_Suite" Type="int" Nullable="false" />
+    <Property Name="ID_Config" Type="int" Nullable="false" />
+    <Property Name="MassaDados" Type="bit" Nullable="false" />
+    <Property Name="Tabelas_Adicionais" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Qualidade_Automacao.dbo.Validacao_DePara' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Validacao_DePara">
+          <Property Name="tab_aut_nome" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_aut_campo" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_prod_nome" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_prod_campo" Type="nvarchar" MaxLength="300" />
+          <Property Name="validar" Type="bit" />
+          <Property Name="chave_tabela" Type="bit" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Qualidade_Automacao.dbo.Validacao_Relacionamentos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Validacao_Relacionamentos">
+          <Property Name="tab_aut_nome" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_aut_campo" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_prod_nome" Type="nvarchar" MaxLength="300" />
+          <Property Name="tab_prod_campo" Type="nvarchar" MaxLength="300" />
+          <Property Name="validar" Type="bit" />
+          <Property Name="chave_tabela" Type="bit" />
+        </EntityType>-->
+  <Function Name="sp_RetornaTreeViewAutomacao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoEC_Ikcadm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaTreeViewAutomacaoEC_Manager" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Qualidade_AutomacaoModeloStoreContainer">
+    <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

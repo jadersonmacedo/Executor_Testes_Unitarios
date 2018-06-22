@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Qualidade_Automacao_Modelo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ordem_Execucao_Automacao">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ordem" Type="Int32" Nullable="false" />
+    <Property Name="Tabela" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Funcionalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nome_Teste" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TreeViewExecucaoAutomacao">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Teste" Type="Int32" Nullable="false" />
+    <Property Name="Tabela" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TestCaseID" Type="Int32" Nullable="false" />
+    <Property Name="Descricao_CasoTeste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Executar" Type="Boolean" Nullable="false" />
+    <Property Name="Nome_Teste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Funcionalidade" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrdemExecucao" Type="Int32" Nullable="false" />
+    <Property Name="ID_Suite" Type="Int32" Nullable="false" />
+    <Property Name="ID_Config" Type="Int32" Nullable="false" />
+    <Property Name="MassaDados" Type="Boolean" Nullable="false" />
+    <Property Name="Tabelas_Adicionais" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Qualidade_Automacao" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ordem_Execucao_Automacao" EntityType="Self.Ordem_Execucao_Automacao" />
+    <EntitySet Name="TreeViewExecucaoAutomacao" EntityType="Self.TreeViewExecucaoAutomacao" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacao" />
+    <FunctionImport Name="sp_RetornaTreeViewAutomacaoEC_Manager" />
+  </EntityContainer>
+</Schema>
