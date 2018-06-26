@@ -336,7 +336,7 @@ namespace Executor_Testes.Exec.For
                 if (File.Exists(diretorio + DateTime.Now.ToString("dd-MM-yyyy") + "_Automacao.txt"))
                     File.Delete(diretorio + "\\" + DateTime.Now.ToString("dd-MM-yyyy") + "_Automacao.txt");
 
-                var lstArvoreExecucao = selecionadosAutomacao.Where(t => t.Executar == true).Select(t => new { ID = t.OrdemExecucao, Nome = t.Nome_Teste }).Distinct().OrderBy(n => n.ID).ToList();
+                var lstArvoreExecucao = selecionadosAutomacao.Where(t => t.Executar == true).Select(t => new { Funcionalidade = t.Funcionalidade, ID = t.OrdemExecucao, Nome = t.Nome_Teste, Descricao = t.Descricao_CasoTeste }).Distinct().OrderBy(n => n.ID).ToList();
 
                 string pathProject = AppDomain.CurrentDomain.BaseDirectory;
                 string dll = pathProject + cbxProjetos.Text + ".dll";
@@ -346,10 +346,10 @@ namespace Executor_Testes.Exec.For
 
                 pgbStatus.Value = 0;
 
-
                 foreach (var item in lstArvoreExecucao)
                 {
-                    lblCenariosDeTetes.Text = item.Nome;
+                    lblFuncionalidade.Text = "Funcionalidade: " + item.Funcionalidade;
+                    lblCenario.Text = "Cenario de Teste: "+item.Descricao;
 
                     int totalTeste = lstArvoreExecucao.Count;
 

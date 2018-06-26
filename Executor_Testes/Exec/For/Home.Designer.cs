@@ -43,7 +43,8 @@
             this.btnExecutar = new System.Windows.Forms.Button();
             this.btnCarregarCenarios = new System.Windows.Forms.Button();
             this.pgbStatus = new System.Windows.Forms.ProgressBar();
-            this.lblCenariosDeTetes = new System.Windows.Forms.Label();
+            this.lblFuncionalidade = new System.Windows.Forms.Label();
+            this.lblCenario = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbpCenariosTeste.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -172,20 +173,29 @@
             this.pgbStatus.Size = new System.Drawing.Size(350, 23);
             this.pgbStatus.TabIndex = 9;
             // 
-            // lblCenariosDeTetes
+            // lblFuncionalidade
             // 
-            this.lblCenariosDeTetes.AutoSize = true;
-            this.lblCenariosDeTetes.Location = new System.Drawing.Point(139, 480);
-            this.lblCenariosDeTetes.Name = "lblCenariosDeTetes";
-            this.lblCenariosDeTetes.Size = new System.Drawing.Size(0, 13);
-            this.lblCenariosDeTetes.TabIndex = 10;
+            this.lblFuncionalidade.AutoSize = true;
+            this.lblFuncionalidade.Location = new System.Drawing.Point(139, 457);
+            this.lblFuncionalidade.Name = "lblFuncionalidade";
+            this.lblFuncionalidade.Size = new System.Drawing.Size(0, 13);
+            this.lblFuncionalidade.TabIndex = 10;
+            // 
+            // lblCenario
+            // 
+            this.lblCenario.AutoSize = true;
+            this.lblCenario.Location = new System.Drawing.Point(139, 480);
+            this.lblCenario.Name = "lblCenario";
+            this.lblCenario.Size = new System.Drawing.Size(0, 13);
+            this.lblCenario.TabIndex = 11;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 505);
-            this.Controls.Add(this.lblCenariosDeTetes);
+            this.Controls.Add(this.lblCenario);
+            this.Controls.Add(this.lblFuncionalidade);
             this.Controls.Add(this.pgbStatus);
             this.Controls.Add(this.btnCarregarCenarios);
             this.Controls.Add(this.btnExecutar);
@@ -226,6 +236,7 @@
         private System.Windows.Forms.ToolStripMenuItem tspRelatorioExecução;
         private System.Windows.Forms.Button btnCarregarCenarios;
         private System.Windows.Forms.ProgressBar pgbStatus;
-        private System.Windows.Forms.Label lblCenariosDeTetes;
+        private System.Windows.Forms.Label lblFuncionalidade;
+        private System.Windows.Forms.Label lblCenario;
     }
 }
